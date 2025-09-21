@@ -12,7 +12,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUser, etPass;
     private Button btnSignIn;
     private TextView tvGoSignUp;
-    private final MockRepo.UserRepo repo = new MockRepo.UserRepo();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +33,11 @@ public class LoginActivity extends AppCompatActivity {
 
             if (!validateLogin(u, p)) return;
 
-            if (!repo.exists(u)) {
+            if (!MockRepo.exists(u)) {
                 etUser.setError("Account not found");
                 return;
             }
-            if (!repo.verify(u, p)) {
+            if (!MockRepo.verify(u, p)) {
                 etPass.setError("Wrong password");
                 return;
             }

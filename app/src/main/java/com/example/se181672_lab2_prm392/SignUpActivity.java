@@ -12,7 +12,6 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText etUser, etPass, etConfirm;
     private Button btnSignUp;
     private TextView tvGoSignIn;
-    private final MockRepo.UserRepo repo = new MockRepo.UserRepo();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +35,11 @@ public class SignUpActivity extends AppCompatActivity {
 
             if (!validateSignup(u, p, c)) return;
 
-            if (repo.exists(u)) {
+            if (MockRepo.exists(u)) {
                 etUser.setError("Username already exists");
                 return;
             }
-            repo.save(u, p);
+            MockRepo.save(u, p);
             Toast.makeText(this, "Account created!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, LoginActivity.class));
             finish();
