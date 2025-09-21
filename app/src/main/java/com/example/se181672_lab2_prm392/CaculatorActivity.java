@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-public class MainActivity2 extends AppCompatActivity {
+public class CaculatorActivity extends AppCompatActivity {
     private static final String KEY_A = "KEY_A";
     private static final String KEY_B = "KEY_B";
     private static final String KEY_RESULT = "KEY_RESULT";
@@ -27,7 +27,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.caculator_activity);
 
         editTextNumber1 = findViewById(R.id.editTextNumber1);
         editTextNumber2 = findViewById(R.id.editTextNumber2);

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.security.SecureRandom;
 
-public class MainActivity extends AppCompatActivity {
+public class RandomGeneratorActivity extends AppCompatActivity {
 
     private EditText etMin, etMax;
     private TextView tvResult;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.random_generator_activity);
 
         etMin = findViewById(R.id.etMin);
         etMax = findViewById(R.id.etMax);
